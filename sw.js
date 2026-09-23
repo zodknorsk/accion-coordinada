@@ -1,4 +1,4 @@
-var CACHE = 'coordinada-1.0-651dae2d1d4d';
+var CACHE = 'coordinada-1.1-96c218553a8c';
 var ARCHIVOS = ['./', 'index.html', 'manifest.webmanifest', 'icono-180.png', 'icono-192.png', 'icono-512.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ARCHIVOS); }).then(function () { return self.skipWaiting(); }));
