@@ -1,6 +1,6 @@
 {
-  "name": "Acción coordinada de iluminante",
-  "short_name": "Coordinada",
+  "name": "Calculadora CIRE – Coordinada de Iluminantes y Rompedoras",
+  "short_name": "CIRE",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

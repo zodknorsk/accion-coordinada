@@ -1,4 +1,4 @@
-var CACHE = 'coordinada-1.2-761e9669d04f';
+var CACHE = 'coordinada-1.3-b8fbb3c288e2';
 var ARCHIVOS = ['./', 'index.html', 'manifest.webmanifest', 'icono-180.png', 'icono-192.png', 'icono-512.png'];
 self.addEventListener('install', function (e) {
   // cache: 'reload' para no coger lo que el navegador tenga guardado de la versión anterior
