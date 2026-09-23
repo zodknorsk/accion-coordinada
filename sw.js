@@ -1,7 +1,9 @@
-var CACHE = 'coordinada-1.1-96c218553a8c';
+var CACHE = 'coordinada-1.2-761e9669d04f';
 var ARCHIVOS = ['./', 'index.html', 'manifest.webmanifest', 'icono-180.png', 'icono-192.png', 'icono-512.png'];
 self.addEventListener('install', function (e) {
-  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ARCHIVOS); }).then(function () { return self.skipWaiting(); }));
+  // cache: 'reload' para no coger lo que el navegador tenga guardado de la versión anterior
+  var peticiones = ARCHIVOS.map(function (u) { return new Request(u, { cache: 'reload' }); });
+  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(peticiones); }).then(function () { return self.skipWaiting(); }));
 });
 self.addEventListener('activate', function (e) {
   e.waitUntil(caches.keys().then(function (nombres) {
